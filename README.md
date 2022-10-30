@@ -19,11 +19,14 @@ import matplotlib.pyplot as plt
 
 import pandas as pd
 
-# creare la cartella <LAB/CO2>
-!mkdir -p /LAB/CO2
+# cambiare la directory (cartella) attuale
+os.chdir('/')
 
-# cambiare la directory (cartella) attuale in <LAB/CO2>
-os.chdir('/LAB/CO2')
+# creare la cartella <LAB/CO2>
+!mkdir -p LAB/CO2
+
+# cambiare la dir corrente in <LAB/CO2>
+os.chdir('LAB/CO2')
 
 # controllare la dir attuale (o corrente)
 os.getcwd()
