@@ -23,22 +23,29 @@ os.chdir('LAB/CO2')
 
 # controllare la dir attuale (o corrente)
 os.getcwd()
+# output
 /LAB/CO2
 
+# per importare da un drive locale 
 from google.colab import files
-uploaded = files.upload()
 
 # selezionare il file da caricare: <CO2.xlsx>
+uploaded = files.upload()
 
 # visualizzare il contenuto della dir corrente
 !ls
+# output
 CO2.xlsx
 
+# leggere il foglio di calcolo di excel (che contiene i dati) in un data frame
 excel_data_df = pd.read_excel('CO2.xlsx', sheet_name='CO2')
+
+# rinominare il data frame
 df = excel_data_df
 
 # verificare il tipo di struttura dati di df
 type(df)
+# output
 pandas.core.frame.DataFrame
 
 # costruire il grafico
